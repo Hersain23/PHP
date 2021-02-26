@@ -1,0 +1,64 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *,
+            ::after,
+            ::before{
+                margin:0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                display:inline-flex;
+                width:100vw;
+                height:100vh;
+                flex-flow:nowrap row;
+                justify-content:center;
+                align-items: center;
+            }
+            form{
+                display:inline-flex;
+                flex-flow:wrap row;
+                width:500px;
+                height:auto;
+                align-content: center;
+                align-items: center;
+                
+            }
+            label{
+                margin:0 0 10px 5px;
+            }
+            input{
+                border-radius:3px;
+                margin:0 0 10px 5px;
+            }
+            textarea{
+                border-radius:3px;
+                width:100%;
+                margin:0 0 5px 0;
+                padding:5px;
+            }
+            
+            button{
+                width:100%;
+                height:auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        <form action="correo.php" method="POST">
+            <label for="asunto">Asunto</label><input type="text" name="asunto" placeholder="Asunto">
+            <label for="remitente">Correo</label><input type="email" name="remitente" placeholder="Correo" required><br>
+            <textarea name="mensaje" placeholder="¡Hola! Enviame un Correo" cols="61" rows="15"></textarea>
+            <br>
+            <button type="submit">Enviar Correo</button>
+        </form>
+        </div>
+    </body>
+    </html>
